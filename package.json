@@ -1,7 +1,7 @@
 {
   "name": "co-better-body",
-  "version": "1.0.0",
-  "repository": "zhoul-HS/co-body",
+  "version": "1.0.1",
+  "repository": "zhoul-HS/co-better-body",
   "description": "request body parsing for co",
   "keywords": [
     "request",

@@ -15,6 +15,12 @@ $ npm install co-body
 
   - `limit` number or string representing the request size limit (1mb for json and 56kb for form-urlencoded)
 
+  Available via [qs](https://github.com/hapijs/qs):
+
+  - `depth` number representing the parsed object maximum hierarchy depth, default `5`
+  - `delimiter` string or regex representing the query string delimeter, default `&`
+  - `arrayLimit` nubmer representing the maximum array size or -1 to disable arrays, default `20`
+
 ## Example
 
 ```js
