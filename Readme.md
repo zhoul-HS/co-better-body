@@ -1,7 +1,11 @@
 
-# co-body
+# co-better-body
 
   Parse request bodies with generators inspired by [Raynos/body](https://github.com/Raynos/body).
+
+# Better? WAT?
+
+  [co-body](https://github.com/tj/co-body) has outdated dependencies. plus you can't pass options to qs meaning you're stuck with maximum depth of 5 for parsing forms using object and array notations in field names. Since it seems all but abandoned, and there's quite a few body parsing packages that depend on it, I made some quick changes only updating the `qs` and `raw-body` versions and added passing options to `qs`.
 
 ## Installation
 
@@ -29,6 +33,14 @@ var body = yield parse.json(req);
 
 // explicit limit
 var body = yield parse.json(req, { limit: '10kb' });
+
+// qs depth
+var body = yield parse.json(req,  {
+    limit: '10kb',
+    qs: {
+     depth: 10
+    }
+});
 
 // application/x-www-form-urlencoded
 var body = yield parse.form(req);
